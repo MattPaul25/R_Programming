@@ -1,0 +1,63 @@
+R brief history: 
+R is a dialect of S
+	S is a language developed by John Chambers at Bell Labs in 1976 
+		Implemented as a series of fourtran libraries - early forms didnt contain statistical models
+		In 1988 it was rewritten in the C language - Version 3
+		Version 4 (was developed in 1988) 
+
+		Bell Labs gave STat SCi - an exclusive license to dev and sell the S language
+
+		ub 04 Inishgt ful purchased S language from Lucent for 2m
+
+		S language still exst as S-plus
+
+	S philosophy
+		Wanted to create an interactive environment - where you are not thinking about programming
+		Use the environment without knowing about any sort of programming
+		Use it to look at data and do analysis
+		System promotes transition from user to programmer
+
+
+Back to R - 91 created in NZ by Ross Ihaka and Robert Gentlemen 
+			93 it was first announced to the public
+			95 use GNU General Public License to make R free software
+			96 A public mailing list is created (r-help and r-devel)
+			97 R core group is formed
+			2000 R version 1 is released
+			13 R version 3.0.2 released
+
+	R features:
+			Semantics are similar to S - but its quite different
+			Runs on any OS (even ps3?)
+			Core software is lean... 
+			Strong graphics capabilities - 
+			R is free (free beer, and free speech)
+				Free software 4 principles
+					Freedom to run the program for any purpose freedom0
+					Freedom to study how the program works, and adapt it to your needs freedom0
+					Freedom to redistribute copies to your neighbors freedom2
+					Freedom to improve the program and release them to the public
+
+	R Drawbacks
+			1 Based on 40 year old technology
+			2 Little support for dynamic or 3d graphics
+			3 functionality is based on consumer demands and user contributions
+			4 Objects must generally be stored on physical memory, but there have been advancements
+			5 Not ideal for all possible situations 
+	
+	Design of R system
+			Base R system you download from CRAN
+			The base system include utils stats datasets graphics grdevices grid methods tools parallel compiler splines tcltk stats4
+			Revommended packages (boot, class, cluster, codetools, foreign, KernSmooth, lattice, mgcv, rpart, survival, MASS, spatial, nnet, matrix)
+
+			CRAN has 4k packages that have been developed by users and programmers around the world
+
+
+	R resources on CRAN (http://cran.r-project.org)
+			Intro to R
+			Writing R extensions
+			R data import/exports
+			R import 
+
+
+
