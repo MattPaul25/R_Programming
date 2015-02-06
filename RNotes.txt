@@ -1,3 +1,28 @@
+Functions to know
+	general console functions and help
+		getwd() - > get working directory -- getwd()
+		setwd(dir) -> set the current working directory
+		ls() - > list Current NameSpace Objects
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++
+
+
+
+
+
 R brief history: 
 R is a dialect of S
 	S is a language developed by John Chambers at Bell Labs in 1976 
@@ -58,6 +83,28 @@ Back to R - 91 created in NZ by Ross Ihaka and Robert Gentlemen
 			Writing R extensions
 			R data import/exports
 			R import 
+
+	R data Types - all things are 'objects' 
+			Basic Objects - character, numeric, integer, complex and logical (bool)
+			Vector is an array -> no mixed types 
+			List is a vector that is a sequence of objects -> not necessarily the same type
+
+			Vector function (class, length)
+
+		Numbers
+			numbers are treated as numeric objects (double precision real numbers)
+			Inf is special number that represents infinity
+			If you explicitly want an integer, must specify the L suffix
+			NaN (not a number) -> undefined or missing - can be thought of as a missing value
+
+		Attributes
+			Names, dimnames
+			dimensions (e.g. matrices, arrays)
+			class
+			length
+			other defined objects
+
+
 
 
 
