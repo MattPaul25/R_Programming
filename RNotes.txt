@@ -3,12 +3,14 @@ Functions to know
 		getwd() - > get working directory -- getwd()
 		setwd(dir) -> set the current working directory
 		ls() - > list Current NameSpace Objects
+		source(fileName) -> pull source data into console
+		args(functionName) -> shows all the args of specified function
 
 
 
 
-
-
+		cbind(x, y) -> converts two vectors to matrix -- puts x and y into columns
+		xbind(x,y) -> converts two vectors into rows -- puts x and y into rows
 
 
 

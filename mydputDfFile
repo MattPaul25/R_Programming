@@ -1,0 +1,2 @@
+structure(list(x = 2, y = 5), .Names = c("x", "y"), row.names = c(NA, 
+-1L), class = "data.frame")
