@@ -110,7 +110,56 @@ Error in parse(file = file) : invalid connection
 > dput(Df, file = "mydputDfFile") #creates a file with meta data in current working directory
 > dget(Df)
 Error in parse(file = file) : invalid connection
-> dget("mydputDfFile")
+> dget("mydputDfFile") #grabs the file from dput - reconstructs the r object based on the data from dput
   x y
 1 2 5
+
+Dumping example (can create a text file with multiple objects and we can bering it back by using the source command)
+> x <-'foo'
+> y <- data.frame(a = 1, b = "a")
+> dump(c("x", "y"), file = "data.R") #dumps objects x and y into local file called data.r with meta data
+> rm(x,y)  #removes the x and y objects from console
+> x
+Error: object 'x' not found
+> y
+Error: object 'y' not found
+> source("data.R")  #pulls the data from the dump
+> x
+[1] "foo"
+> y
+  a b
+1 1 a
+
+
+Interfaces to the outside world
+
+--abstracts out the mechanism to connect to things
+
+Data is often read using connection interfaces. Connections can be made to files (most common) or t other more exotic things
+file, opens a connection to a file
+gzfile, opens a connection to a file compressed with gzip
+bzfile, opens a connection to a file compressed with bzip2
+url, opens a connection to a webpage
+
+Connections 
+in general connections are powerful tools that let you navigate files or exdternal objects. In practive we often dont need to deal with the connection interface directly
+
+con <- file("foo.txt", "r") #opens file foo.txt for reading
+data <- read.csv(con)
+close(con)
+
+is the same as 
+
+data <- read.csv("foo.txt")
+
+con <- gzfile("words.gz")
+x <- readLines(con, 10)
+x
+
+#reads lines from connection on the 10th line 
+
+
+readLines can be useful for reading in lines of webpages
+con <- url ("http://www.jhsph.edu", "r")
+x <-readlines(con)
 

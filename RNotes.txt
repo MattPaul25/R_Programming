@@ -1,25 +1,38 @@
 Functions to know
 	general console functions and help
+
+		ctrl + L - clear console
+
 		getwd() - > get working directory -- getwd()
 		setwd(dir) -> set the current working directory
 		ls() - > list Current NameSpace Objects
 		source(fileName) -> pull source data into console
 		args(functionName) -> shows all the args of specified function
-
-
-
-
+		rm(x, y, ...) remove specified objects
+		complete.cases(object) -> returns object of logical bools for anything not an NA
+		dump()
+		dput()
+		dget()
+		str() means structure - diagnostic - answers question of whats in this object. Works with functions and vectors 
+		file(description = "", open = "", blocking = TRUE, encoding = getOption("encoding")) open r (reading), w(writing), a (appending), etc.
+		read(filename)
+		readlines(filename, lineNum)
+		writelines(filename, c(1,2,3,4,5,6,7,8,9,10)) 
+		??functionName -> returns the R  help guide to that function
 		cbind(x, y) -> converts two vectors to matrix -- puts x and y into columns
 		xbind(x,y) -> converts two vectors into rows -- puts x and y into rows
 
+Data Types
+	Atomic classes: numeric, logical, character, integer, complex
+	vectors, lists -> vectors only have elements of the same class , lists can have items of several types (classes)
+	factors
+	missing values -> Na NaN
+	data frames -> Tabular Data
+	names -> self describing data
 
 
 
 
-
-
-
-+
 
 
 
