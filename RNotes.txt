@@ -33,11 +33,6 @@ Data Types
 
 
 
-
-
-
-
-
 R brief history: 
 R is a dialect of S
 	S is a language developed by John Chambers at Bell Labs in 1976 

@@ -27,3 +27,17 @@ x
 #$c
 #[1] 3
 
+
+# Matrices can also have names 
+
+> m <- matrix(1:4, nrow = 2, ncol = 2)
+> m
+     [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+> dimnames(m) <- list(c("a", "b"), c("c", "d"))
+> m
+  c d
+a 1 3
+b 2 4
+> 

@@ -1,4 +1,4 @@
-#Data frames are used to store tabular Data
+#Data frames are used tcompo store tabular Data
 #they are represented as special type of list where every element of the list has to have some length
 #Each element of the list can be though of as a column and the the langeth of each element of the list is the number of rows
 #Unlike matrices, data frames can store different classes of objects in each columns (like lists);
