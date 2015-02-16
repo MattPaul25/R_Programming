@@ -102,14 +102,71 @@ make.power <- function(n){
 
 y <- 10
 f3 <- function (x1) {
-  y <- 2
-  y^2 + g(x1)
+    y <- 2
+    y^2 + g(x1)
 }
 
 g <- function(x) {
-  x * y
+    x * y
 }
 
 #what is f3(3)?
 # lexical: in the g function the value of y is equal to 10 because its in the global environment
 # dynamic: in the g function the value of y is equal to 2 because that is the calling environment (dynamic != R scoping)
+#scheme, lisp and python are all lexical scoping
+#in R all objects must be stored in memory
+#all functions must carry a pointer to their respective defining environments, which could be anywhere
+#in s-plus free variables are always looked up in the global workspace, so everything can be stored on the disk because the defining environment of all functions is the same
+
+
+#There are several optimization functions - optim, nlm and optimize - require you to pass a function 
+
+#Dates and Times
+#Dates are represented by the date class - 
+# Times are are represented by two separate classes POSIXct or the POSIXlt class
+#dates are stored as the number of days since 1/1/1970
+#times are stored intenrally as the number of seconds since 1/1/1970
+
+basicDateFunc <- function(timeString){
+  x <- as.Date(timeString)
+}
+# d <- basicDateFunc("1970-01-02")
+# "1970-01-02" #d not actually a string
+# unclass(d)
+# [1] 1 - because its 1 day after 1/1/1970
+
+#time:
+# posix is a family of standards of how to represent dates and times
+#posix ct class stores times  as very large integer under the hood, which is useful when you want to store time in a dataframe
+#posix lt is a list underneath and it stores a bunch of other useful information like the day of the week, year, month, day o fthe month
+
+#Some Generic functions that work with dates
+
+# weekdays - returns day of the week
+# months - returns the month name
+# quarters - returns the quarter number
+
+# as.POSIXlt(x) <- converts to a different time style 
+# as.POSIXct(x) <- converts to integer
+# x <- sys.time() <- today
+# 
+# > x <- Sys.time()
+# > x
+# [1] "2015-02-15 13:38:41 PST"
+# > unclass(x)
+# [1] 1424036322
+# > x <- Sys.time()
+# > unclass(x)
+# [1] 1424036380
+# > y <- as.POSIXlt(x)
+# > y
+# [1] "2015-02-15 13:39:39 PST"
+
+
+#strptime function converts date strings into actual times
+# 
+# > datestring <- c("january 10, 2012 10:40")
+# > x <-strptime(datestring, "%B %d, %Y") %B = month
+# > x
+# [1] "2012-01-10 PST"
+
