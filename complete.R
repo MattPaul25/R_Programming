@@ -8,6 +8,6 @@ complete <- function(directory, id = 1:332) {
     table.completion <- rbind(table.completion, myRow)
 }
 colnames(table.completion)[1] <- "id"
-colnames(table.completion)[2] <- "nob"
+colnames(table.completion)[2] <- "nobs"
 table.completion
 }
