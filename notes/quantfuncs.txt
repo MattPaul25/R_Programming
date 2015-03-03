@@ -1,0 +1,24 @@
+d	density 
+r	rnadom
+p	cumulative distribution
+q	quantile
+
+
+dnorm
+pnorm
+qnorm
+rnorm
+
+if phi is the cumulative distribution function for a normal distribution , then pnorm(q) is phi (q) and qnorm(p) is the oppositeD
+
+set seed is a way to ensure reproducibility - seed runs the 
+set.seed(1)
+rnorm(5)
+
+generating poisson data
+ rpois(10, 3)
+ [1] 2 1 4 2 4 3 4 8 2 4
+> rpois(10, 3)
+ [1] 6 2 4 1 2 2 0 2 5 2
+
+ ppois <- cumulation of pois
